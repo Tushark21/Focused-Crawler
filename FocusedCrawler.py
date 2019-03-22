@@ -6,7 +6,7 @@ from functools import partial
 
 #initialUrl="https://www.javatpoint.com/python-tkinter"
 
-pagesReq=2
+pagesReq=4
 
 #Scrapping
 def scrape(inputUrl,inputSearchText,linksLabel):
@@ -42,7 +42,7 @@ def scrape(inputUrl,inputSearchText,linksLabel):
                         print(txt,re.search(txt,text),(re.search(txt,text) is not re.search('3','dummy')),a['href']);
                         if (re.search(txt,text) is not re.search('3','dummy')) :
                             cnt+=1;
-                        if cnt==len(txt):
+                        if cnt==len(inputList):
                             linkList.append(a['href'])
                             allLinks+='\n'+a['href']
                             count+=1
